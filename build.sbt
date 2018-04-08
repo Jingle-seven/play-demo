@@ -1,5 +1,5 @@
 name := """play-demo"""
-organization := "xz.com"
+organization := "xz.com"
 
 version := "1.0-SNAPSHOT"
 

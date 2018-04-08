@@ -1,0 +1,19 @@
+@(name:String,age:Int,nums:List[String])
+
+<!- 调用了mylayout的布局 ->
+@mylayout{
+        <h2>@("hello! "+name) @session.get("sum")</h2>
+        @if(age<10){
+            <h2>your age:@age is too young</h2>
+        }else{
+            <h2>your age:@age is too naive</h2>
+        }
+
+        <ul>
+        @for(num <- nums){
+            <li>title @num</li>
+        }
+        </ul>
+        <p>调用一个模板代码块</p>
+        @numsit(nums)
+}

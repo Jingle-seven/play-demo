@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/workspace/play-demo/conf/routes
-// @DATE:Sun Apr 08 09:58:27 CST 2018
+// @DATE:Sun Apr 08 14:41:59 CST 2018
 
 package controllers;
 
