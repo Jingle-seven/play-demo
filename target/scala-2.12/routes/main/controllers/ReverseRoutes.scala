@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/workspace/play-demo/conf/routes
-// @DATE:Sun Apr 08 14:41:59 CST 2018
+// @SOURCE:D:/workspace/idea/play-demo/conf/routes
+// @DATE:Sat May 05 16:19:39 CST 2018
 
 import play.api.mvc.Call
 
@@ -18,16 +18,16 @@ package controllers {
     }
 
   
+    // @LINE:8
+    def sum(id:Integer): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "test/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
+    }
+  
     // @LINE:10
     def testView(name:String, age:Int): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "test-view" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("name", name)), Some(implicitly[play.api.mvc.QueryStringBindable[Int]].unbind("age", age)))))
-    }
-  
-    // @LINE:8
-    def test1(id:Integer): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "test/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
     }
   
     // @LINE:6

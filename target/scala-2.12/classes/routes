@@ -5,7 +5,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 # path parameter，the para's name in uri should same as in route
-GET     /test/:id                   controllers.HomeController.test1(id:Integer)
+GET     /test/:id                   controllers.HomeController.sum(id:Integer)
 # nomal paramater
 GET     /test-view                   controllers.HomeController.testView(name:String,age:Int)
 

@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(E:\workspace\play-demo\conf\application.conf,E:\workspace\play-demo\target\scala-2.12\classes\application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(E:\workspace\play-demo\conf\logback.xml,E:\workspace\play-demo\target\scala-2.12\classes\logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(E:\workspace\play-demo\conf\routes,E:\workspace\play-demo\target\scala-2.12\classes\routes)[0m
+[debug] Copy resource mappings: 
+[debug] 	(D:\workspace\idea\play-demo\conf\application.conf,D:\workspace\idea\play-demo\target\scala-2.12\classes\application.conf)
+[debug] 	(D:\workspace\idea\play-demo\conf\logback.xml,D:\workspace\idea\play-demo\target\scala-2.12\classes\logback.xml)
+[debug] 	(D:\workspace\idea\play-demo\conf\routes,D:\workspace\idea\play-demo\target\scala-2.12\classes\routes)

@@ -1,19 +1,20 @@
-@(name:String,age:Int,nums:List[String])
+@(name: String, age: Int, nums: List[String])
 
 <!- 调用了mylayout的布局 ->
-@mylayout{
-        <h2>@("hello! "+name) @session.get("sum")</h2>
-        @if(age<10){
+    @mylayout {
+        <h2>@("hello! " + name) @session.get("sum")</h2>
+        <p>根据age是否大于10显示不同内容</p>
+        @if(age < 10) {
             <h2>your age:@age is too young</h2>
-        }else{
+        } else {
             <h2>your age:@age is too naive</h2>
         }
-
+        <p>自己模块的foreach代码块</p>
         <ul>
-        @for(num <- nums){
+        @for(num <- nums) {
             <li>title @num</li>
         }
         </ul>
         <p>调用一个模板代码块</p>
         @numsit(nums)
-}
+    }

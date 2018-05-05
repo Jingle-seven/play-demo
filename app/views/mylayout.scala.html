@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>page 1</title>
+        @* 不知道加的样式表有没有效果,应该是用@routes.Assets.at来加的,然而报错*@
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.+("stylesheets/bootstrap.min.css")">
+
     </head>
     <body>
         @content

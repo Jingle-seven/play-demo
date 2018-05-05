@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/workspace/play-demo/conf/routes
-// @DATE:Sun Apr 08 14:41:59 CST 2018
+// @SOURCE:D:/workspace/idea/play-demo/conf/routes
+// @DATE:Sat May 05 16:19:39 CST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,22 +19,22 @@ package controllers.javascript {
     }
 
   
+    // @LINE:8
+    def sum: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.sum",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:10
     def testView: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.testView",
       """
         function(name0,age1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test-view" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("name", name0), (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("age", age1)])})
-        }
-      """
-    )
-  
-    // @LINE:8
-    def test1: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.test1",
-      """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
         }
       """
     )

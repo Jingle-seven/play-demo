@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/workspace/play-demo/conf/routes
-// @DATE:Sun Apr 08 14:41:59 CST 2018
+// @SOURCE:D:/workspace/idea/play-demo/conf/routes
+// @DATE:Sat May 05 16:19:39 CST 2018
 
 package router
 
@@ -40,7 +40,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test/""" + "$" + """id<[^/]+>""", """controllers.HomeController.test1(id:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test/""" + "$" + """id<[^/]+>""", """controllers.HomeController.sum(id:Integer)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test-view""", """controllers.HomeController.testView(name:String, age:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -69,15 +69,15 @@ class Routes(
   )
 
   // @LINE:8
-  private[this] lazy val controllers_HomeController_test11_route = Route("GET",
+  private[this] lazy val controllers_HomeController_sum1_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("test/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_test11_invoker = createInvoker(
-    HomeController_0.test1(fakeValue[Integer]),
+  private[this] lazy val controllers_HomeController_sum1_invoker = createInvoker(
+    HomeController_0.sum(fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "test1",
+      "sum",
       Seq(classOf[Integer]),
       "GET",
       this.prefix + """test/""" + "$" + """id<[^/]+>""",
@@ -132,9 +132,9 @@ class Routes(
       }
   
     // @LINE:8
-    case controllers_HomeController_test11_route(params@_) =>
+    case controllers_HomeController_sum1_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_HomeController_test11_invoker.call(HomeController_0.test1(id))
+        controllers_HomeController_sum1_invoker.call(HomeController_0.sum(id))
       }
   
     // @LINE:10
