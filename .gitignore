@@ -9,3 +9,4 @@ target/
 .pydevproject
 
 .gradle/
+project/project/

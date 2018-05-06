@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\idea\play-demo\app\controllers\UserController.java:24:1:  错误: 不是语句[0m
+[0m[[0m[31merror[0m] [0m[0m        Form[0m
+[0m[[0m[31merror[0m] [0m[0m        ^^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\idea\play-demo\app\controllers\UserController.java:24:1:  错误: 需要';'[0m
+[0m[[0m[31merror[0m] [0m[0m        Form[0m
+[0m[[0m[31merror[0m] [0m[0m            ^^[0m

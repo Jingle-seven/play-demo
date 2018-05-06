@@ -5,7 +5,7 @@ import model.Dept;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tb_user")
+@Table(name="table_user")
 public class User {
     public User(){}
     public User(String name, String account) {
