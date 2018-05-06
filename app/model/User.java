@@ -16,7 +16,9 @@ public class User {
     public Long id;
     public String name;
     public String account;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    //REFRESH MERGE 刷新自己的外键而不保存对方的记录?
+    //对用户中dept的更改似乎不能影响dept表,只有新增才可以
+    @ManyToOne
     public Dept dept;
 
     public User setId(Long id) {
