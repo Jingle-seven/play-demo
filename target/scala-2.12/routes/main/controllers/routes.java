@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:D:/workspace/idea/play-demo/conf/routes
-// @DATE:Sun May 06 12:22:48 CST 2018
+// @DATE:Sun May 06 22:47:53 CST 2018
 
 package controllers;
 

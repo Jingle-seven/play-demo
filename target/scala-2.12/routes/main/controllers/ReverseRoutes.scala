@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:D:/workspace/idea/play-demo/conf/routes
-// @DATE:Sun May 06 12:22:48 CST 2018
+// @DATE:Sun May 06 22:47:53 CST 2018
 
 import play.api.mvc.Call
 
@@ -38,14 +38,14 @@ package controllers {
   
   }
 
-  // @LINE:16
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:16
+    // @LINE:20
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -60,16 +60,35 @@ package controllers {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def addUser(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "user")
     }
   
-    // @LINE:12
-    def listUser(id1:Long = (-1), id2:Long = (-1)): Call = {
+    // @LINE:15
+    def updateUser(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "user" + play.core.routing.queryString(List(if(id1 == (-1)) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id1", id1)), if(id2 == (-1)) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id2", id2)))))
+      Call("PUT", _prefix + { _defaultPrefix } + "user")
+    }
+  
+    // @LINE:12
+    def listUser(id1:Long, id2:Long): Call = {
+    
+      (id1: @unchecked, id2: @unchecked) match {
+      
+        // @LINE:12
+        case (id1, id2)  =>
+          
+          Call("GET", _prefix + { _defaultPrefix } + "user" + play.core.routing.queryString(List(if(id1 == (-1)) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id1", id1)), if(id2 == (-1)) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id2", id2)))))
+      
+        // @LINE:13
+        case (id1, id2) if id2 == (-1) =>
+          implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("id2", (-1)))); _rrc
+          Call("GET", _prefix + { _defaultPrefix } + "user/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id1)))
+      
+      }
+    
     }
   
   }

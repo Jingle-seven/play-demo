@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:D:/workspace/idea/play-demo/conf/routes
-// @DATE:Sun May 06 12:22:48 CST 2018
+// @DATE:Sun May 06 22:47:53 CST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -51,7 +51,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:16
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -59,7 +59,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:16
+    // @LINE:20
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -79,7 +79,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def addUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.addUser",
       """
@@ -89,12 +89,26 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:15
+    def updateUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.updateUser",
+      """
+        function() {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "user"})
+        }
+      """
+    )
+  
     // @LINE:12
     def listUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.listUser",
       """
         function(id10,id21) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user" + _qS([(id10 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id1", id10)), (id21 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id2", id21))])})
+        
+          if (true) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user" + _qS([(id10 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id1", id10)), (id21 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id2", id21))])})
+          }
+        
         }
       """
     )
