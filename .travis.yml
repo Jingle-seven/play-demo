@@ -2,11 +2,16 @@ dist: trusty # 使用ubuntu的trusty版本?
 sudo: true
 
 language: scala # 声明为scala才会默认用sbt执行安装依赖的工作,java默认用maven?
-#scala:
-#- 2.11.11
-#- 2.12.3
+scala:
+- 2.12.5
 jdk:
 - oraclejdk8
+
 script:
 - sbt clean
 - sbt compile
+
+notifications:
+  slack:
+    on_success: never
+    on_failure: always
