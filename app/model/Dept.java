@@ -32,7 +32,7 @@ public class Dept {
 //    }
 
     /**
-     *  似乎只能用这种方法保存级联的对象id,接受String参数并处理
+     *  似乎只能用这种方法保存表单级联的对象id,接受String参数并处理
      */
     public Dept(String id) {
         this.id = Long.parseLong(id);

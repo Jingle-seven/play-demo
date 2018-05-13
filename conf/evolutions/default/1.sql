@@ -3,6 +3,17 @@
 
 # --- !Ups
 
+create table book (
+  id                            varchar(255) not null,
+  order_number                  integer,
+  name                          varchar(255),
+  date                          date,
+  operation                     varchar(255),
+  user_id                       integer,
+  user_name                     varchar(255),
+  constraint pk_book primary key (id)
+);
+
 create table table_dept (
   id                            bigint auto_increment not null,
   location                      varchar(255),
@@ -26,6 +37,8 @@ create index ix_table_user_dept_id on table_user (dept_id);
 
 alter table table_user drop foreign key fk_table_user_dept_id;
 drop index ix_table_user_dept_id on table_user;
+
+drop table if exists book;
 
 drop table if exists table_dept;
 

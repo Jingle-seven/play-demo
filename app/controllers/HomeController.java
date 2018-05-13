@@ -12,7 +12,8 @@ public class HomeController extends Controller {
 
     //首页
     public Result index() {
-        return ok(views.html.index.render());
+//        return ok(views.html.index.render());
+        return ok(views.html.book_index.render());
     }
     //传入参数到模板
     public Result testView(String name,int age) {
